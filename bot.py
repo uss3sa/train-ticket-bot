@@ -96,7 +96,7 @@ async def check_once(chat_id):
             # базовая проверка: появление куцев/плцкарт
             if cfg["type"] in txt.lower():
                 await bot.send_message(chat_id, f"🎉 {cfg['type'].capitalize()} найдено на {dt}\n{url}")
-                cfg["running"] = False
+            
                 return
         except Exception as e:
             await bot.send_message(chat_id, "Ошибка при проверке: " + str(e))
